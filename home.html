@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio — Nama Anda</title>
+  <meta name="description" content="Portofolio pribadi — Nama Anda. Web sederhana berisi tentang, proyek, keterampilan, kontak." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#06b6d4; --muted:#94a3b8; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px; --radius:14px; --fw-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:var(--fw-sans);background:linear-gradient(180deg,#071023 0%, #071426 100%);color:#e6eef6;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--maxw);margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021026}
+    nav a{color:var(--muted);margin-left:18px;text-decoration:none;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-bottom:28px}
+    .card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+    .intro h1{margin:0 0 8px;font-size:28px}
+    .intro p{margin:0;color:var(--muted);line-height:1.6}
+    .cta{margin-top:18px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:#021026;text-decoration:none;font-weight:700}
+    .profile{display:flex;flex-direction:column;align-items:center;text-align:center}
+    .avatar{width:160px;height:160px;border-radius:20px;background:linear-gradient(135deg,#1e293b,#0b1220);display:flex;align-items:center;justify-content:center;font-size:48px;font-weight:800;color:var(--accent);margin-bottom:12px}
+    .meta{color:var(--muted);font-size:14px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .projects{margin:28px 0}
+    .project-card{padding:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px}
+    .skills{display:flex;gap:12px;flex-wrap:wrap}
+    .skill{background:var(--glass);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600}
+    footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr;}
+      .grid3{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .grid3{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">NA</div>
+        <div>
+          <div style="font-weight:800">Nama Anda</div>
+          <div style="font-size:13px;color:var(--muted)">Frontend Developer • UI Enthusiast</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card intro">
+        <h1>Halo — saya <span style="color:var(--accent)">Nama Anda</span></h1>
+        <p>Saya membuat antarmuka yang bersih dan pengalaman pengguna yang mudah dipahami. Saya fokus pada HTML, CSS, dan JavaScript modern. Berikut contoh proyek dan cara menghubungi saya.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">Lihat Proyek</a>
+          <a class="btn" href="mailto:email@anda.com" style="margin-left:10px;opacity:0.95">Email Saya</a>
+        </div>
+
+        <div style="margin-top:18px;color:var(--muted)">
+          <strong>Lokasi:</strong> Jakarta, Indonesia &nbsp;&nbsp; <strong>Waktu Kerja:</strong> Remote / Freelance
+        </div>
+      </div>
+
+      <aside class="card profile">
+        <div class="avatar">NA</div>
+        <div style="font-weight:700">Nama Anda</div>
+        <div class="meta">Frontend Developer</div>
+
+        <div class="grid3" style="margin-top:16px">
+          <div class="card" style="padding:12px;text-align:center">
+            <div style="font-weight:800">5+</div>
+            <div style="font-size:13px;color:var(--muted)">Tahun pengalaman</div>
+          </div>
+          <div class="card" style="padding:12px;text-align:center">
+            <div style="font-weight:800">20+</div>
+            <div style="font-size:13px;color:var(--muted)">Proyek selesai</div>
+          </div>
+          <div class="card" style="padding:12px;text-align:center">
+            <div style="font-weight:800">Open</div>
+            <div style="font-size:13px;color:var(--muted)">Terima freelance</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="card">
+      <h2>Tentang Saya</h2>
+      <p style="color:var(--muted)">Saya seorang pengembang web yang berfokus pada pembuatan antarmuka yang responsif dan aksesibel. Saya suka mengubah desain menjadi kode yang bersih, terstruktur, dan mudah dipelihara.</p>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Proyek</h2>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:12px">
+        <div class="project-card card">
+          <h3>Project A — Website Company</h3>
+          <p style="color:var(--muted)">Deskripsi singkat proyek: landing page responsif, sistem form, optimasi performa.</p>
+          <p style="font-size:13px;color:var(--muted)"><strong>Teknologi:</strong> HTML, CSS, JavaScript</p>
+          <a href="#" style="text-decoration:none;font-weight:700">Lihat Demo →</a>
+        </div>
+        <div class="project-card card">
+          <h3>Project B — Dashboard</h3>
+          <p style="color:var(--muted)">Dashboard internal dengan visualisasi data sederhana dan autentikasi dasar.</p>
+          <p style="font-size:13px;color:var(--muted)"><strong>Teknologi:</strong> HTML, CSS, Chart.js</p>
+          <a href="#" style="text-decoration:none;font-weight:700">Lihat Demo →</a>
+        </div>
+        <div class="project-card card">
+          <h3>Project C — E-commerce</h3>
+          <p style="color:var(--muted)">Prototype toko online sederhana dengan katalog dan keranjang belanja.</p>
+          <p style="font-size:13px;color:var(--muted)"><strong>Teknologi:</strong> HTML, CSS, JS</p>
+          <a href="#" style="text-decoration:none;font-weight:700">Lihat Demo →</a>
+        </div>
+        <div class="project-card card">
+          <h3>Project D — Blog</h3>
+          <p style="color:var(--muted)">Blog statis dengan tata letak posting yang rapi dan navigasi tag.</p>
+          <p style="font-size:13px;color:var(--muted)"><strong>Teknologi:</strong> HTML, Markdown</p>
+          <a href="#" style="text-decoration:none;font-weight:700">Lihat Demo →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="card" style="margin-top:18px">
+      <h2>Keahlian</h2>
+      <div class="skills" style="margin-top:10px">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">Git</div>
+        <div class="skill">Accessibility (A11y)</div>
+      </div>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:18px">
+      <h2>Kontak</h2>
+      <p style="color:var(--muted)">Tertarik bekerja sama? Kirim email ke <a href="mailto:email@anda.com">email@anda.com</a> atau isi formulir sederhana di bawah.</p>
+      <form style="margin-top:12px;display:grid;gap:8px;max-width:600px">
+        <input placeholder="Nama" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+        <input placeholder="Email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+        <textarea placeholder="Pesan" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+        <button type="button" class="btn" onclick="alert('Terima kasih — ini demo formulir!')">Kirim Pesan</button>
+      </form>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Nama Anda — Dibuat dengan ❤️ • <span style="color:var(--muted)">HTML • CSS • JS</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
